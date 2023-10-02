@@ -1,6 +1,6 @@
 # Demo.AuthService
 
-Demo.AuthService is more abstract of an authentication service and the given code has only the 2Factor authentication, its related controller, services.
+Demo.AuthService is abstract of an authentication service and the given code has only the 2Factor authentication, its related controller, services written in .Net Core.
 
 Any client an be used to send SMS to user phone number and its related configurations are available in appsettings.json under SMSClientSettings.
 Also to generate the code, the allowed characters and the length of confirmation code is as mentioned in the appsettings.json under SMSConfiguration.
