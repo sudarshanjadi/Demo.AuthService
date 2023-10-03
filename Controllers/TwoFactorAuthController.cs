@@ -1,8 +1,6 @@
 ﻿using Demo.AuthService.Helpers;
 using Demo.AuthService.Interfaces;
-using Demo.AuthService.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Options;
 using System.Net;
 
 namespace Demo.AuthService.Controllers
