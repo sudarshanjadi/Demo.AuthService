@@ -13,6 +13,12 @@ namespace Demo.AuthService.Models
             _smsConfiguration = smsConfiguration;
         }
 
+        /// <summary>
+        /// Sends an SMS to user using the client
+        /// </summary>
+        /// <param name="number">User phone number</param>
+        /// <param name="message">Optional message, if message not passed it will generate the code</param>
+        /// <returns>True if SMS is successfully sent if not returns false</returns>
         public Task<bool> SendSmsAsync(string number, string message="")
         {
             if (string.IsNullOrEmpty(message))
@@ -26,6 +32,11 @@ namespace Demo.AuthService.Models
            return Task.FromResult(true);
         }
 
+        /// <summary>
+        /// Helps to verify the code sent by user
+        /// </summary>
+        /// <param name="confirmationCode">Code received by user</param>
+        /// <returns>True if verification is successful, if not False</returns>
         public Task<bool> VerifySmsAsync(string confirmationCode)
         {
             //Use a Nuget or other clients to verify given code
