@@ -43,8 +43,8 @@ namespace Demo.AuthService.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex.Message);
-                return StatusCode((int)HttpStatusCode.InternalServerError, "Error processing request.");
+                _logger.LogError(ex, "Error while sending confirmation code.");
+                return StatusCode((int)HttpStatusCode.InternalServerError, "Error while sending confirmation code.");
             }
        
         }
@@ -72,8 +72,8 @@ namespace Demo.AuthService.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex.Message);
-                return StatusCode((int)HttpStatusCode.InternalServerError, "Error processing request.");
+                _logger.LogError(ex, "Error verifying confirmation code.");
+                return StatusCode((int)HttpStatusCode.InternalServerError, "Error verifying confirmation code.");
             }
 
         }
